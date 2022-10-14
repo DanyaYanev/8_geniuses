@@ -1,0 +1,34 @@
+def factorial():
+    t = 1
+    if x == 0:
+        print(t)
+    else:
+        for i in range(1, x + 1):
+            t *= i
+        print(t)
+s1 = []
+while True:
+    x = int(input())
+    op = input()
+    if op == '+':
+        y = int(input())
+        print(x+y)
+        s1.append(x+y)
+    elif op == '-':
+        y = int(input())
+        print(x-y)
+        s1.append(x-y)
+    elif op == '*':
+        y = int(input())
+        print(x*y)
+        s1.append(x*y)
+    elif op == '/':
+        y = int(input())
+        print(x//y)
+        s1.append(x//y)
+    elif op == '%':
+        y = int(input())
+        print(x%y)
+        s1.append(x%y)
+    elif op == '!':
+        factorial()
