@@ -1,0 +1,39 @@
+'''функциz для поиска минимума среди трех чисел'''
+'''
+x = int(input())
+y = int(input())
+z = int(input())
+a = [x, y, z]
+b = min(a)
+print(b)
+'''
+
+'''функция, которая вычисляет количество цифр числа'''
+'''
+def i(x):
+   n = 0
+   while x > 0:
+      x = x // 10
+      n += 1
+   return n
+x = int (input('Введите число '))
+print(i(x))
+'''
+
+'''функция, которая вычисляет сумму всех чисел от 1 до N'''
+'''
+n = int(input())
+a = sum(range(n + 1))
+print(a)
+'''
+
+'''функция, которая вычисляет факториал натурального числа N'''
+'''
+n = int(input())
+def fact(n):
+    if(n==1 or n==0):
+        return 1
+    else:
+        return n*fact(n-1)
+print(fact(n))
+'''
