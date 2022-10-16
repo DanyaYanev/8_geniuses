@@ -16,11 +16,14 @@ print((False or False) and (True and True))
 
 #2
 
-a, b, c, d = int(input("Введите число a: ")), int(input("Введите число b: ")), int(input("Введите число c: ")), int(input("Введите число d: "))
-if a == b and a == c and a == d:
-    print("Равно")
-else:
-    print("Не равно")
+num = float(input('Введите число для сравнения: '))
+for i in range(3):
+    new_num = float(input('Введите число: '))
+    if num != new_num:
+        print('НЕ РАВНО')
+        exit()
+    elif num == new_num:
+        print('Равно')
 
 #3
 
