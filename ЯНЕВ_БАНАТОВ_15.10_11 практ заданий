@@ -1,3 +1,5 @@
+# Янев и Банатов
+
 #1 
 
 print((101 + 0) / 3)
@@ -44,18 +46,30 @@ print(sorted(c)[:k])
 
 #5
 
-import random
-k = int(input())
-n = 30
-c = [0] * n
-for i in range(n):
-    c[i] = random.randint(1, 100)
-print(c)
-m = max(c)
-l = min(c)
-mid = (m+l) / 2
-print(mid)
-print(sorted(c)[:k])
+from random import *
+k = int(input('Введите число k: '))                # количество значение которое нужно пользователю
+count = 0                                          # счетчик, чтобы сравнить значение счётчика и введённого к,
+# чтобы вывести столько значений, сколько нужно пользователю
+N = 100                                            # кол-во элементов в массиве. Для удобства выбрали 100
+massif = [0] * N
+for i in range(N):
+   massif[i] = int(random() * 100)                 # задаем рандомные числа от 0 до 100
+print(massif)
+# здесь питон выведет массив с 30 рандомными числами
+
+average = sum(massif) / N                          # ср. знач. = сумма всех элементов, деленная на их количество
+print(average)
+# здесь выведет массив и под ним среднее значение
+
+bigger = []         # создаем пустой массив, в котором будут храниться значения
+# больше среднего (average), добавленные методом append в конец данного массива
+for i in range(N):                                 # цикл для каждого элемента N в массиве
+   if massif[i] > average and count < k:           # сравнивает каждое значение в массиве со средним и вместе с этим
+# проверяет условие count < k, которое и поможет нам вывести столько значений, сколько нужно пользователю
+
+      bigger.append(massif[i])                     # append - добавляет элемент в конец списка
+      count +=1
+print(bigger)
 
 #6
 
@@ -65,7 +79,20 @@ for i in range(b):
     count+= a
     b -=1
 print(count)
-    
+
+#7
+
+from random import *
+
+N = int(input('Введите количество элементов массива: '))
+massif = [int(randint(0, 100)) for i in range(N)]
+even = [int(i) for i in massif if i % 2 == 0]
+odd = [int(i) for i in massif if i % 2 != 0]
+
+print(massif)
+print(even)
+print(odd)
+
 #8 
 
 far = int(input("Введите температуру в Фаренгейтах: ")) 
