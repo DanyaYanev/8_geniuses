@@ -43,7 +43,7 @@ match tasklist:
         print('Простые числа:', mas)
     case 4:
         # Задание 4
-        print('привет')
+        print('привет Ромка')
     case 5:
         # Задание 5 (которых нет во втором)
         mas1 = list(map(int, input('Введите первый список: ').split()))
