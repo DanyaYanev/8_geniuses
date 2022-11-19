@@ -41,14 +41,16 @@ print(mas_reverse)
 '''
 
 '''
-# Задание 3
-a, b = int(input('Введите нижнюю границу диапазона:')), int(input('Введите верхнюю границу диапазона:'))
+a, b = int(input('Введите: ')),  int(input('Введите: '))
 mas = []
 for i in range(a, b+1):
-    mas.append(i)
+    for j in range(2, i):
+        if i % j == 0:
+            break
+
+    else:
+        mas.append(i)
 print(mas)
-simple = [x for x in mas if x%x == 0]
-print(simple)
 '''
 
 '''
