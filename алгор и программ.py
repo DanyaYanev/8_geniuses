@@ -51,8 +51,14 @@ simple = [x for x in mas if x%x == 0]
 print(simple)
 '''
 
+'''
 # Задание 5 (которых нет во втором)
-
+mas1 = list(map(int, input().split()))
+mas2 = list(map(int, input().split()))
+print(mas1,mas2, sep='\n')
+result = list(set(mas1) - set(mas2))
+print(result)
+'''
 
 
 '''
