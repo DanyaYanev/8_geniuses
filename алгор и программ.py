@@ -43,7 +43,14 @@ match tasklist:
         print('Простые числа:', mas)
     case 4:
         # Задание 4
-        print('привет Ромка')
+        n = int(input('Введите число в десятичной системе счисления: '))
+        k = int(input('Введите систему счисления: '))
+
+        ls = []
+        while n > 0:
+            n, a = divmod(n, k)
+            ls = [a] + ls
+        print(''.join([str(i) for i in ls]))  # join - соединяет элементы списка 
     case 5:
         # Задание 5 (которых нет во втором)
         mas1 = list(map(int, input('Введите первый список: ').split()))
