@@ -1,0 +1,338 @@
+import math
+formula = int(input("Введите номер задания : "))
+match formula:
+    case 1:
+        result = 0
+        print("Путь,время,скорость.\n Основная формула: S = v * t ")
+        finding = str(input("Введите искомое: "))
+        if finding == "S":
+            v = float(input("Введите скорость : "))
+            t = float(input("Введите время : "))
+            result = v * t
+        elif finding == "v":
+            S = float(input("Введите путь : "))
+            t = float(input("Введите время : "))
+            result = S/t
+        elif finding == "t":
+            S = float(input("Введите путь : "))
+            v = float(input("Введите скорость : "))
+            result = S/v
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 2:
+        result = 0
+        print("Равномерно ускоренное движение.Ускорение.\n Основная формула: a = Δv/t ")
+        finding = str(input("Введите искомое: "))
+        if finding == "a":
+            delv = float(input("Введите изменение скорости, если оно не известно введите 0: "))
+            if delv == 0:
+                v0 = float(input("Введите нулевую скорость: "))
+                v1 = float(input("Введите  скорость: "))
+            t = float(input("Введите время : "))
+            result = delv / t
+        elif finding == "v":
+            a = float(input("Введите ускорение : "))
+            t = float(input("Введите время : "))
+            result = a * t
+        elif finding == "t":
+            a = float(input("Введите ускорение : "))
+            delv = float(input("Введите изменение скорости : "))
+            if delv == 0:
+                v0 = float(input("Введите нулевую скорость: "))
+                v1 = float(input("Введите  скорость: "))
+            result = delv/a
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 3:
+        print("Равномерно ускоренное движение.Путь.\n Основная формула: S = v * t + (a * t^2) /2 ")
+        v = float(input("Введите  скорость: "))
+        t = float(input("Введите время : "))
+        a = float(input("Введите ускорение : "))
+        result = v * t + (a * (t ** 2)) / 2
+        print(f"Ответ:{result}")
+    case 4:
+        print("Высота тела брошенного вертикально вверх. Основная формула: h = h0 + v0 * t - (g * t^2) /2 ")
+        h0 = float(input("Введите изначальную высоту: "))
+        v0 = float(input("Введите изначальную скорость: "))
+        t = float(input("Введите время: "))
+        g = 9.8
+        result = h0 + v0 * t - (g * (t**2))/2
+        print(f"Ответ:{result}")
+    case 5:
+        print("Скорость тела брошенного вертикально вверх. Основная формула: v =  v0 - g * t  ")
+        v0 = float(input("Введите изначальную скорость: "))
+        t = float(input("Введите время: "))
+        g = 9.8
+        result = v0 - g * t
+        print(f"Ответ:{result}")
+    case 6:
+        result = 0
+        print("Скорость, ускорение, время. Основная формула: v =  a * t  ")
+        finding = str(input("Введите искомое: "))
+        if finding == "a":
+            v = float(input("Введите скорость : "))
+            t = float(input("Введите время : "))
+            result = v / t
+        elif finding == "v":
+            a = float(input("Введите ускорение : "))
+            t = float(input("Введите время : "))
+            result = a * t
+        elif finding == "t":
+            a = float(input("Введите ускорение : "))
+            v = float(input("Введите скорость : "))
+            result = v/a
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 7:
+        result = 0
+        print("Центростремительное ускорение. Основная формула: a = v^2/R  ")
+        finding = str(input("Введите искомое: "))
+        if finding == "a":
+            v = float(input("Введите скорость : "))
+            R = float(input("Введите радиус : "))
+            result = v**2 / R
+        elif finding == "v":
+            a = float(input("Введите ускорение : "))
+            R = float(input("Введите радиус : "))
+            result = math.sqrt(a * R)
+        elif finding == "R":
+            a = float(input("Введите ускорение : "))
+            v = float(input("Введите скорость : "))
+            result = v**2 / a
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 8:
+        result = 0
+        print("Угловая скорость. Основная формула: ω = φ/t  ")
+        finding = str(input("Введите искомое: "))
+        if finding == "ω":
+            fi = float(input("Введите угол : "))
+            t = float(input("Введите время : "))
+            result = fi/t
+        elif finding == "φ":
+            omega = float(input("Введите угловую скорость : "))
+            t = float(input("Введите время : "))
+            result = omega * t
+        elif finding == "t":
+            fi = float(input("Введите угол : "))
+            omega = float(input("Введите угловую скорость : "))
+            result = fi / omega
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 9:
+        print("Равномерное круговое движение. Основная формула: l = R * φ ")
+        R = float(input("Введите радиус: "))
+        fi = float(input("Введите угол: "))
+        result = R * fi
+        print(f"Ответ:{result}")
+    case 10:
+        result = 0
+        print("Равномерное круговое движение: линейная скорость. Основная формула: v = R * ω ")
+        finding = str(input("Введите искомое: "))
+        if finding == "v":
+            omega = float(input("Введите угловую скорость : "))
+            R = float(input("Введите радиус : "))
+            result = R * omega
+        elif finding == "ω":
+            v = float(input("Введите линейную скорость : "))
+            R = float(input("Введите радиус : "))
+            result = v/R
+        elif finding == "R":
+            v = float(input("Введите линейную скорость : "))
+            omega = float(input("Введите угловую скорость : "))
+            result = v/omega
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 11:
+        print("Период вращения1. Основная формула: T = t/N ")
+        t = float(input("Введите время: "))
+        N = float(input("Введите число вращений: "))
+        result = t/N
+        print(f"Ответ:{result}")
+    case 12:
+        print("Период вращения2. Основная формула: T = 2*π*R /v  ")
+        pi = math.pi
+        R = float(input("Введите радиус: "))
+        v = float(input("Введите линейную скорость: "))
+        result = (2 * pi * R) / v
+        print(f"Ответ:{result}")
+    case 13:
+        print("Период вращения3. Основная формула: T = 2*π/ω  ")
+        pi = math.pi
+        omega = float(input("Введите угловую скорость: "))
+        result = (2 * pi) / omega
+        print(f"Ответ:{result}")
+    case 14:
+        print("Центростремительное ускорение. Основная формула: a = 4 * π^2 * R * n^2  ")
+        pi = math.pi
+        R = float(input("Введите радиус: "))
+        n = float(input("Введите частоту вращения: "))
+        result = 4 * pi**2 * R * n ** 2
+        print(f"Ответ:{result}")
+    case 15:
+        result = 0
+        print("Частота вращения. Основная формула: n = 1/T ")
+        finding = str(input("Введите искомое: "))
+        if finding == "n":
+            T = float(input("Введите период вращения : "))
+            result = 1/T
+        elif finding == "T":
+            n = float(input("Введите частоту вращения : "))
+            result = 1/n
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 16:
+        print("Центростремительное ускорение. Основная формула: a = ω^2 * R  ")
+        R = float(input("Введите радиус: "))
+        omega = float(input("Введите угловую скорость: "))
+        result = omega ** 2 * R
+        print(f"Ответ:{result}")
+    case 17:
+        print("Основное уравнение молекулярно-кинетической теории. Основная формула: p = 1/3 * n * m0 * v^2  ")
+        n = float(input("Введите концентрацию: "))
+        m0 = float(input("Введите массу молекулы: "))
+        v = float(input("Введите скорость: "))
+        result = 1/3 * n * m0 * v**2
+        print(f"Ответ:{result}")
+    case 18:
+        print("Концентрация молекул. Основная формула: n = N/V  ")
+        N = float(input("Введите число молекул: "))
+        V = float(input("Введите объём: "))
+        result = N/V
+        print(f"Ответ:{result}")
+    case 19:
+        print("Давление идеального газа. Основная формула: p = 2/3 * n * E  ")
+        E = float(input("Введите энергию: "))
+        n = float(input("Введите концентрацию: "))
+        result = 2/3 * n * E
+        print(f"Ответ:{result}")
+    case 20:
+        print("Внутренняя энергия молекул. Основная формула: E = m * v^2 /2  ")
+        m = float(input("Введите массу: "))
+        v = float(input("Введите скорость: "))
+        result = m * (v ** 2) / 2
+        print(f"Ответ:{result}")
+    case 21:
+        print("Средняя кинетическая энергия. Основная формула: E  = (3 * k * T)/2 ")
+        k = 1.36 * 10 ** -23
+        T = float(input("Введите температуру: "))
+        result = (3 * k * T)/2
+        print(f"Ответ:{result}")
+    case 22:
+        print("Уравнение состояния идеального газа. Основная формула: p = vRT/V ")
+        R = 8.3
+        T = float(input("Введите температуру: "))
+        V = float(input("Введите объём: "))
+        v = float(input("Введите скорость: "))
+        result = (v * R * T) / V
+        print(f"Ответ:{result}")
+    case 23:
+        result = 0
+        print("Сила, масса, ускорение. Основная формула: F = m * a ")
+        finding = str(input("Введите искомое: "))
+        if finding == "F":
+            m = float(input("Введите массу : "))
+            a = float(input("Введите ускорение : "))
+            result = m * a
+        elif finding == "m":
+            F = float(input("Введите силу : "))
+            a = float(input("Введите ускорение : "))
+            result = F/a
+        elif finding == "a":
+            F = float(input("Введите силу : "))
+            m = float(input("Введите массу : "))
+            result = F/m
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 24:
+        result = 0
+        print("Сила тяжести. Основная формула: N = m * g ")
+        finding = str(input("Введите искомое: "))
+        if finding == "N":
+            g = 9.8
+            m = float(input("Введите массу : "))
+            result = m * g
+        elif finding == "m":
+            N = float(input("Введите силу тяжести : "))
+            g = 9.8
+            result = N / g
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 25:
+        result = 0
+        print("Сила трения. Основная формула: F = μ * N ")
+        finding = str(input("Введите искомое: "))
+        if finding == "F":
+            mu = float(input("Введите коэффициент трения : "))
+            N = float(input("Введите силу тяжести : "))
+            result = mu * N
+        elif finding == "N":
+            mu = float(input("Введите коэффициент трения : "))
+            F = float(input("Введите силу тяжести : "))
+            result = F / mu
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 26:
+        print("Закон всемирного тяготения. Основная формула: F = (G *(m1 * m2))/r^2 ")
+        m1 = float(input("Введите массу первого тела : "))
+        m2 = float(input("Введите массу второго тела : "))
+        r = float(input("Введите расстояние между телами : "))
+        G = 6.6743 * (10 ** -11)
+        result = (G * (m1 * m2) / r ** 2)
+        print(f"Ответ:{result}")
+    case 27:
+        print("Первая космическая скорость. Основная формула: v = √(g * R) ")
+        R = float(input("Введите радиус планеты(км) : "))
+        g = float(input("Введите ускорение свободного падения планеты : "))
+        result = math.sqrt(g * R)
+        print(f"Ответ:{result}")
+    case 28:
+        print("Вторая космическая скорость. Основная формула: v = √(2 * g * R) ")
+        R = float(input("Введите радиус планеты(км) : "))
+        g = float(input("Введите ускорение свободного падения планеты : "))
+        result = math.sqrt(2 * g * R)
+        print(f"Ответ:{result}")
+    case 29:
+        result = 0
+        print("Вес тела. Основная формула: P = m * g ")
+        finding = str(input("Введите искомое: "))
+        if finding == "P":
+            g = 9.8
+            m = float(input("Введите массу тела : "))
+            result = m * g
+        elif finding == "m":
+            g = 9.8
+            P = float(input("Введите вес тела : "))
+            result = P / g
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 30:
+        result = 0
+        print("Сила упругости. Основная формула: F = k * x ")
+        finding = str(input("Введите искомое: "))
+        if finding == "F":
+            k = float(input("Введите жёсткость : "))
+            x = float(input("Введите удлинение (сокращение) предмета : "))
+            result = k * x
+        elif finding == "k":
+            F = float(input("Введите cилу упругости : "))
+            x = float(input("Введите удлинение (сокращение) предмета : "))
+            result = F / x
+        elif finding == "x":
+            F = float(input("Введите cилу упругости : "))
+            k = float(input("Введите жёсткость : "))
+            result = F / k
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
