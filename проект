@@ -28,6 +28,7 @@ match formula:
             q1 = float(input("Введите первый заряд : "))
             q2 = float(input("Введите второй заряд : "))
             result = math.sqrt(k * abs(q1 * q2) * F)
-            print("Переменная не найдена.")
+            
         else:
-            print(f"Ответ:{result}")
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
