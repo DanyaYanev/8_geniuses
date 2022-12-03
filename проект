@@ -1,0 +1,33 @@
+import math
+formula = int(input("Введите номер задания : "))
+match formula:
+    case 1:
+        result = 0
+        k = 9 * 10 ** 9
+        print("Закон Кулона.\nОсновная формула: F = k * (|q1| * |q2|) / r^2 ")
+        finding = str(input("Введите искомое: "))
+        if finding == "F":
+            q1 = float(input("Введите первый заряд : "))
+            q2 = float(input("Введите второй заряд : "))
+            r = float(input("Введите расстояние между зарядами : "))
+            result = (k * abs(q1 * q2)) / r**2
+        elif finding == "k":
+            result = k
+        elif finding == "q1":
+            F = float(input("Введите силу : "))
+            q2 = float(input("Введите второй заряд : "))
+            r = float(input("Введите расстояние между зарядами : "))
+            result = (F * r**2) / (k * abs(q2))
+        elif finding == "q2":
+            F = float(input("Введите силу : "))
+            q1 = float(input("Введите первый заряд : "))
+            r = float(input("Введите расстояние между зарядами : "))
+            result = (F * r ** 2) / (k * abs(q1))
+        elif finding == "r":
+            F = float(input("Введите силу : "))
+            q1 = float(input("Введите первый заряд : "))
+            q2 = float(input("Введите второй заряд : "))
+            result = math.sqrt(k * abs(q1 * q2) * F)
+        else:дена.")
+        print(f"Ответ:{result}")
+            print("Переменная не най
