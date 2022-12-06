@@ -27,11 +27,11 @@ match formula:
         if finding == "a":
             delv = float(input("Введите изменение скорости, если оно не известно введите 0: "))
             if delv == 0:
-                v1 = float(input("Введите первую скорость: "))
-                v2 = float(input("Введите вторую скорость: "))
+                v1 = float(input("Введите начальную скорость: "))
+                v2 = float(input("Введите конечную скорость: "))
             t = float(input("Введите время : "))
             result = delv / t
-        elif finding == "v":
+        elif finding == "Δv":
             a = float(input("Введите ускорение : "))
             t = float(input("Введите время : "))
             result = a * t
@@ -39,8 +39,8 @@ match formula:
             a = float(input("Введите ускорение : "))
             delv = float(input("Введите изменение скорости, если оно не известно введите 0  : "))
             if delv == 0:
-                v1 = float(input("Введите нулевую скорость: "))
-                v2 = float(input("Введите  скорость: "))
+                v1 = float(input("Введите начальную скорость: "))
+                v2 = float(input("Введите конечную скорость: "))
             result = delv/a
         else:
             print("Переменная не найдена.")
