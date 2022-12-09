@@ -10,14 +10,14 @@ match formula:
             q1 = float(input("Введите первый заряд : "))
             q2 = float(input("Введите второй заряд : "))
             r = float(input("Введите расстояние между зарядами : "))
-            result = (k * abs(q1 * q2)) / r**2
+            result = (k * abs(q1 * q2)) / r ** 2
         elif finding == "k":
             result = k
         elif finding == "q1":
             F = float(input("Введите силу : "))
             q2 = float(input("Введите второй заряд : "))
             r = float(input("Введите расстояние между зарядами : "))
-            result = (F * r**2) / (k * abs(q2))
+            result = (F * r ** 2) / (k * abs(q2))
         elif finding == "q2":
             F = float(input("Введите силу : "))
             q1 = float(input("Введите первый заряд : "))
@@ -28,7 +28,162 @@ match formula:
             q1 = float(input("Введите первый заряд : "))
             q2 = float(input("Введите второй заряд : "))
             result = math.sqrt(k * abs(q1 * q2) * F)
-            
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 2:
+        result = 0
+        k = 9 * 10 ** 9
+        print("Плотность энергии электрического поля.\nФормула: Wp = k * (|q1| * |q2|) / r")
+        finding = str(input("Введите искомое: "))
+        if finding == "Wp":
+            q1 = float(input("Введите первый заряд : "))
+            q2 = float(input("Введите второй заряд : "))
+            r = float(input("Введите расстояние между зарядами : "))
+            result = (k * abs(q1 * q2)) / r
+        elif finding == "k":
+            result = k
+        elif finding == "q1":
+            Wp = float(input("Введите плотность : "))
+            q2 = float(input("Введите второй заряд : "))
+            r = float(input("Введите расстояние между зарядами : "))
+            result = (Wp * r) / (k * abs(q2))
+        elif finding == "q2":
+            Wp = float(input("Введите плотность : "))
+            q1 = float(input("Введите первый заряд : "))
+            r = float(input("Введите расстояние между зарядами : "))
+            result = (Wp * r) / (k * abs(q1))
+        elif finding == "r":
+            Wp = float(input("Введите плотность : "))
+            q1 = float(input("Введите первый заряд : "))
+            q2 = float(input("Введите второй заряд : "))
+            result = k * abs(q1 * q2) * Wp
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 3:
+        result = 0
+        print("Плотность энергии электрического поля.\nФормула: Wp = Fd")
+        finding = str(input("Введите искомое: "))
+        if finding == "Wp":
+            F = float(input("Введите силу : "))
+            d = float(input("Введите расстояние между пластин : "))
+            result = F * d
+        elif finding == "F":
+            Wp = float(input("Введите плотность : "))
+            d = float(input("Введите расстояние между пластин : "))
+            result = Wp / d
+        elif finding == "d":
+            Wp = float(input("Введите плотность : "))
+            F = float(input("Введите силу : "))
+            result = Wp / F
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 4:
+        result = 0
+        print("Плотность энергии электрического поля.\nФормула: Wp = qEd")
+        finding = str(input("Введите искомое: "))
+        if finding == "Wp":
+            q = float(input("Введите заряд : "))
+            E = float(input("Введите напряжённость электрического поля : "))
+            d = float(input("Введите расстояние между пластин : "))
+            result = q * E * d
+        elif finding == "q":
+            Wp = float(input("Введите плотность : "))
+            E = float(input("Введите напряжённость электрического поля : "))
+            d = float(input("Введите расстояние между пластин : "))
+            result = Wp * E * d
+        elif finding == "E":
+            Wp = float(input("Введите плотность : "))
+            q = float(input("Введите заряд : "))
+            d = float(input("Введите расстояние между пластин : "))
+            result = Wp * q * d
+        elif finding == "d":
+            q = float(input("Введите заряд : "))
+            E = float(input("Введите напряжённость электрического поля : "))
+            Wp = float(input("Введите плотность : "))
+            result = q * E * Wp
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 5:
+        result = 0
+        print("Плотность энергии электрического поля.\nФормула: Wp = qφ / 2")
+        finding = str(input("Введите искомое: "))
+        if finding == "Wp":
+            q = float(input("Введите заряд : "))
+            φ = float(input("Введите потенциал : "))
+            result = q * φ / 2
+        elif finding == "q":
+            Wp = float(input("Введите плотность : "))
+            φ = float(input("Введите потенциал : "))
+            result = Wp * 2 / φ
+        elif finding == "φ":
+            Wp = float(input("Введите плотность : "))
+            q = float(input("Введите заряд : "))
+            result = Wp * 2 / q
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 6:
+        result = 0
+        print("Потенциал электростатического поля.\nФормула: φ = Wp / q")
+        finding = str(input("Введите искомое: "))
+        if finding == "φ":
+            Wp = float(input("Введите плотность : "))
+            q = float(input("Введите заряд : "))
+            result = Wp / q
+        elif finding == "Wp":
+            φ = float(input("Введите потенциал : "))
+            q = float(input("Введите заряд : "))
+            result = φ * q
+        elif finding == "q":
+            Wp = float(input("Введите плотность : "))
+            φ = float(input("Введите потенциал : "))
+            result = Wp / φ
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 7:
+        result = 0
+        k = 9 * 10 ** 9
+        print("Потенциал электростатического поля.\nФормула: φ = k * q / r")
+        finding = str(input("Введите искомое: "))
+        if finding == "φ":
+            q = float(input("Введите заряд : "))
+            r = float(input("Введите расстояние между зарядами : "))
+            result = k * q / r
+        elif finding == "k":
+            result = k
+        elif finding == "q":
+            φ = float(input("Введите потенциал : "))
+            r = float(input("Введите расстояние между зарядами : "))
+            result = φ * r / k
+        elif finding == "r":
+            q = float(input("Введите заряд : "))
+            φ = float(input("Введите потенциал : "))
+            result = k * q / φ
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 8:
+        result = 0
+        k = 9 * 10 ** 9
+        print("Потенциал электростатического поля.\nФормула: φ = Ed")
+        finding = str(input("Введите искомое: "))
+        if finding == "φ":
+            E = float(input("Введите напряжённость электрического поля : "))
+            d = float(input("Введите расстояние между пластин : "))
+            result = E * d
+        elif finding == "E":
+            φ = float(input("Введите потенциал : "))
+            d = float(input("Введите расстояние между пластин : "))
+            result = φ * d
+        elif finding == "d":
+            E = float(input("Введите напряжённость электрического поля : "))
+            φ = float(input("Введите потенциал : "))
+            result = E * φ
         else:
             print("Переменная не найдена.")
         print(f"Ответ:{result}")
