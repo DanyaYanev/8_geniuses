@@ -187,3 +187,93 @@ match formula:
         else:
             print("Переменная не найдена.")
         print(f"Ответ:{result}")
+    case 9:
+        result = 0
+        print("Работа в электрическом поле.\nФормула: A = W1 - W2")
+        finding = str(input("Введите искомое: "))
+        if finding == "A":
+            W1 = float(input("Введите начальную потенциальную энергию : "))
+            W2 = float(input("Введите конечную потенциальную энергию : "))
+            result = W1 - W2
+        elif finding == "W1":
+            A = float(input("Введите работу : "))
+            W2 = float(input("Введите конечную потенциальную энергию : "))
+            result = A + W2
+        elif finding == "W2":
+            A = float(input("Введите работу : "))
+            W1 = float(input("Введите начальную потенциальную энергию : "))
+            result = W1 - A
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 10:
+        result = 0
+        print("Работа в электрическом поле.\nФормула: A = q(φ1 - φ2")
+        finding = str(input("Введите искомое: "))
+        if finding == "A":
+            q = float(input("Введите заряд : "))
+            φ1 = float(input("Введите начальный потенциал : "))
+            φ2 = float(input("Введите конечный потенциал : "))
+            result = q * (φ1 - φ2)
+        elif finding == "q":
+            A = float(input("Введите работу : "))
+            φ1 = float(input("Введите начальный потенциал : "))
+            φ2 = float(input("Введите конечный потенциал : "))
+            result = A / (φ1 - φ2)
+        elif finding == "φ1":
+            A = float(input("Введите работу : "))
+            φ2 = float(input("Введите конечный потенциал : "))
+            q = float(input("Введите заряд : "))
+            result = (A + φ2 * q) / q
+        elif finding == "φ2":
+            A = float(input("Введите работу : "))
+            q = float(input("Введите заряд : "))
+            φ1 = float(input("Введите начальный потенциал : "))
+            result = (φ1 * q - A )/ q
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 11:
+        result = 0
+        print("Электрическая ёмкость двух проводников.\nФормула: C = q / U")
+        finding = str(input("Введите искомое: "))
+        if finding == "C":
+            q = float(input("Введите заряд : "))
+            U = float(input("Введите напряжение : "))
+            result = q / U
+        elif finding == "q":
+            C = float(input("Введите электрическую ёмкость : "))
+            U = float(input("Введите напряжение : "))
+            result = C * U
+        elif finding == "U":
+            C = float(input("Введите электрическую ёмкость : "))
+            q = float(input("Введите заряд : "))
+            result = C * q
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
+    case 12:
+        result = 0
+        ε = 1
+        ε0 = 8.85 * 10 ** -12
+        print("Электрическая ёмкость плоского конденсатора.\nФормула: C = ε * ε0 * S / d")
+        finding = str(input("Введите искомое: "))
+        if finding == "C":
+            S = float(input("Введите площадь : "))
+            d = float(input("Введите расстояние между пластин : "))
+            result = ε * ε0 * S / d
+        elif finding == "ε":
+            result = ε
+        elif finding == "ε0":
+            result = ε0
+        elif finding == "d":
+            S = float(input("Введите площадь : "))
+            C = float(input("Введите электрическую ёмкость : "))
+            result = ε * ε0 * S / C
+        elif finding == "s":
+            C = float(input("Введите электрическую ёмкость : "))
+            d = float(input("Введите расстояние между пластин : "))
+            result = C * d / ε * ε0
+        else:
+            print("Переменная не найдена.")
+        print(f"Ответ:{result}")
