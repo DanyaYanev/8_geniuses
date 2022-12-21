@@ -1,3 +1,56 @@
+k1 = 9 * 10 ** 9
+    elif message.text == "Электростатика":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("Закон Кулона")
+        btn2 = types.KeyboardButton("Плотность энергии электрического поля")
+        btn3 = types.KeyboardButton("Потенциал электрического поля")
+        btn4 = types.KeyboardButton("Работа в электрическом поле")
+        btn5 = types.KeyboardButton("Электрическая емкость двух проводников")
+        btn6 = types.KeyboardButton("Электрическая ёмкость плоского конденсатора")
+        btn7 = types.KeyboardButton("Потенциальная энергия заряженного плоского конденсатора")
+        back = types.KeyboardButton("Вернуться в главное меню")
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, back)
+        bot.send_message(message.chat.id, text="Выберите формулу", reply_markup=markup)
+
+    elif message.text == "Квантовая физика":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("Формула Планка")
+        btn2 = types.KeyboardButton("Энергия одного фотона")
+        btn3 = types.KeyboardButton("уравнение Эйнштейна для фотоэффекта")
+        btn4 = types.KeyboardButton("Импульс фотона")
+        btn5 = types.KeyboardButton("Масса фотона")
+        back = types.KeyboardButton("Вернуться в главное меню")
+        markup.add(btn1, btn2, btn3, btn4, btn5, back)
+        bot.send_message(message.chat.id, text="Выберите формулу", reply_markup=markup)
+
+    elif message.text == "Основы СТО":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton("Закон сложения скоростей")
+        btn2 = types.KeyboardButton("Длина тела")
+        btn3 = types.KeyboardButton("Промежуток времени")
+        btn4 = types.KeyboardButton("Энергия покоя")
+        btn5 = types.KeyboardButton("Полная энергия")
+        btn6 = types.KeyboardButton("Релятивистский импульс")
+        btn7 = types.KeyboardButton("Кинетическая энергия")
+        back = types.KeyboardButton("Вернуться в главное меню")
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, back)
+        bot.send_message(message.chat.id, text="Выберите формулу", reply_markup=markup)
+
+    elif message.text == "Закон Кулона":
+        bot.send_message(message.chat.id, text="Формула: F = k * (|q1| * |q2|) / r^2")
+        mes = bot.send_message(message.chat.id, text="Введите первый заряд")
+        bot.register_next_step_handler(mes, "написать")
+        skull = "скорость"
+        skull2 = "Путь ="
+        skull3 = "метр(ов)"
+
+    elif message.text == "Закон Кулона":
+        bot.send_message(message.chat.id, text="Формула: F = k * (|q1| * |q2|) / r^2")
+        mes = bot.send_message(message.chat.id, text="Введите первый заряд")
+        bot.register_next_step_handler(mes, "написать")
+        skull = "скорость"
+        skull2 = "Путь ="
+        skull3 = "метр(ов)"
 import math
 formula = int(input("Введите номер задания : "))
 match formula:
