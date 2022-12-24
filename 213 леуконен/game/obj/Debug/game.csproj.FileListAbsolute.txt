@@ -1,7 +1,0 @@
-C:\Users\stud\213 леуконен\game\bin\Debug\game.exe.config
-C:\Users\stud\213 леуконен\game\bin\Debug\game.exe
-C:\Users\stud\213 леуконен\game\bin\Debug\game.pdb
-C:\Users\stud\213 леуконен\game\obj\Debug\game.csprojAssemblyReference.cache
-C:\Users\stud\213 леуконен\game\obj\Debug\game.csproj.CoreCompileInputs.cache
-C:\Users\stud\213 леуконен\game\obj\Debug\game.exe
-C:\Users\stud\213 леуконен\game\obj\Debug\game.pdb
