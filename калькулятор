@@ -33,7 +33,7 @@ def zanovo():
     v = float(input())
     print('ответ',p*v)
  else:
-  print('ТЫ ТУПОЙ, СЫН ПОДЪЕЗДА БЛЯТЬ, ТЕБЕ ДАЖЕ СПИСОК ПРЕДОСТАВИЛИ')
+  print('не то')
 
 
 zanovo()
